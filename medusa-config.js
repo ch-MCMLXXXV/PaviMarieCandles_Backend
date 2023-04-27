@@ -39,7 +39,7 @@ const DATABASE_URL =
    `postgres://${DB_USERNAME}:${DB_PASSWORD}` +
    `@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`;
 
-const DATABASE_TYPE = process.env.DATABASE_TYPE || 'sqlite';
+// const DATABASE_TYPE = process.env.DATABASE_TYPE || 'sqlite';
 // const DATABASE_URL =
 //    process.env.DATABASE_URL || 'postgres://localhost/medusa-store';
 const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
@@ -100,7 +100,7 @@ const projectConfig = {
    admin_cors: ADMIN_CORS,
    database_extra: { ssl: { rejectUnauthorized: false } },
    // Uncomment the following lines to enable REDIS
-   redis_url: process.env.REDIS_URL,
+   redis_url: REDIS_URL,
 };
 
 if (DATABASE_URL && DATABASE_TYPE === 'postgres') {
