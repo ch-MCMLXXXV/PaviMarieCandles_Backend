@@ -39,7 +39,7 @@ const DATABASE_URL =
    `postgres://${DB_USERNAME}:${DB_PASSWORD}` +
    `@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`;
 
-// const DATABASE_TYPE = process.env.DATABASE_TYPE || 'sqlite';
+const DATABASE_TYPE = process.env.DATABASE_TYPE || 'sqlite';
 // const DATABASE_URL =
 //    process.env.DATABASE_URL || 'postgres://localhost/medusa-store';
 const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
@@ -95,7 +95,7 @@ const modules = {
 const projectConfig = {
    jwtSecret: process.env.JWT_SECRET,
    cookieSecret: process.env.COOKIE_SECRET,
-   database_type: 'postgres',
+   database_type: process.env.DATABASE_TYPE,
    store_cors: STORE_CORS,
    admin_cors: ADMIN_CORS,
    database_extra: { ssl: { rejectUnauthorized: false } },
