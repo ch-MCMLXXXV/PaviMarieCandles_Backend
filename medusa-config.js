@@ -95,7 +95,7 @@ const modules = {
 const projectConfig = {
    jwtSecret: process.env.JWT_SECRET,
    cookieSecret: process.env.COOKIE_SECRET,
-   database_type: process.env.DATABASE_TYPE,
+   database_type: 'postgres',
    store_cors: STORE_CORS,
    admin_cors: ADMIN_CORS,
    database_extra: { ssl: { rejectUnauthorized: false } },
