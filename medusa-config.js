@@ -39,7 +39,7 @@ const DATABASE_URL =
    `postgres://${DB_USERNAME}:${DB_PASSWORD}` +
    `@${DB_HOST}:${DB_PORT}/${DB_DATABASE}`;
 
-// const DATABASE_TYPE = process.env.DATABASE_TYPE || 'sqlite';
+const DATABASE_TYPE = process.env.DATABASE_TYPE || 'sqlite';
 // const DATABASE_URL =
 //    process.env.DATABASE_URL || 'postgres://localhost/medusa-store';
 const REDIS_URL = process.env.REDIS_URL || 'redis://localhost:6379';
@@ -66,16 +66,7 @@ const plugins = [
          secret_access_key: process.env.SPACE_SECRET_ACCESS_KEY,
       },
    },
-   // {
-   //    resolve: 'medusa-fulfillment-shippo',
-   //    options: {
-   //       api_key: SHIPPO_API_KEY,
-   //       weight_unit_type: 'lb',
-   //       dimension_unit_type: 'in',
-   //       webhook_secret: '',
-   //       webhook_test_mode: 'false',
-   //    },
-   // },
+
    {
       resolve: 'medusa-payment-stripe',
       options: {
