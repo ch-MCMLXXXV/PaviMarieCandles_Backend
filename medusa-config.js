@@ -102,6 +102,7 @@ const projectConfig = {
    // database_extra: { ssl: { rejectUnauthorized: false } },
    // Uncomment the following lines to enable REDIS
    redis_url: REDIS_URL,
+   database_url: DATABASE_URL,
 };
 
 if (DATABASE_URL && DATABASE_TYPE === 'postgres') {
