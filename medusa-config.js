@@ -74,6 +74,16 @@ const plugins = [
          webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
       },
    },
+   {
+      resolve: 'medusa-fulfillment-shippo',
+      options: {
+         api_key: process.env.SHIPPO_API_KEY,
+         weight_unit_type: 'lb',
+         dimension_unit_type: 'in',
+         webhook_secret: process.env.SHIPPO_WEBHOOK_SECRET,
+         webhook_test_mode: 'true',
+      },
+   },
 ];
 
 const modules = {
