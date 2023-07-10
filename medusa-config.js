@@ -84,6 +84,15 @@ const plugins = [
          webhook_test_mode: 'true',
       },
    },
+   {
+      resolve: 'medusa-plugin-sendgrid',
+      options: {
+         api_key: process.env.SENDGRID_API_KEY,
+         from: process.env.SENDGRID_FROM,
+         order_placed_template: process.env.SENDGRID_ORDER_PLACED_ID,
+         medusa_restock_template: process.env.SENDGRID_RESTOCK_ID,
+      },
+   },
 ];
 
 const modules = {
