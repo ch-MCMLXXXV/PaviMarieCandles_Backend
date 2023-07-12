@@ -95,6 +95,13 @@ const plugins = [
          medusa_restock_template: process.env.SENDGRID_RESTOCK_ID,
       },
    },
+   {
+      resolve: 'medusa-plugin-mailchimp',
+      options: {
+         api_key: process.env.MAILCHIMP_API_KEY,
+         newsletter_list_id: process.env.MAILCHIMP_NEWSLETTER_LIST_ID,
+      },
+   },
 ];
 
 const modules = {
